@@ -23,6 +23,10 @@ app.controller("EditEmployeeController", function ($scope, $location,ShareData,S
     }
 
 
+    $scope.cancel = function () {
+        $location.path("/showemployees");
+    }
+
     //The Save method used to make HTTP PUT call to the WEB API to update the record
 
     $scope.save = function () {
@@ -37,7 +41,7 @@ app.controller("EditEmployeeController", function ($scope, $location,ShareData,S
         var promisePutEmployee = SinglePageCRUDService.put($scope.Employee.EmpNo,Employee);
         promisePutEmployee.then(function (pl)
         {
-            $location.path("/showemployee");
+            $location.path("/showemployees");
         },
               function (errorPl) {
                   $scope.error = 'failure loading Employee', errorPl;

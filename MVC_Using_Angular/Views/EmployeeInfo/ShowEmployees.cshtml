@@ -1,23 +1,22 @@
 ﻿<h2>List of Employees</h2>
-<a ng-click="addEmployee()"> Add Employee </a>
+<hr />
+<a ng-click="addEmployee()" class="btn-link" > Add Employee </a>
 <br />
-<table>
-    <thead>
-        <tr>
-            <th>EmpNo</th><th>EmpName</th><th>Salary</th><th>DeptName</th><th>Designation</th><th></th><th></th>
+<table class="table table-responsive table-striped" >
+        <tr >
+            <th>EmpNo</th><th>EmpName</th><th>Salary</th><th>DeptName</th><th>Designation</th><th>Actions</th>
         </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="Emp in Employees">
+        <tr  ng-repeat="Emp in Employees">
             <td>{{Emp.EmpNo}}</td>
             <td>{{Emp.EmpName}}</td>
             <td>{{Emp.Salary}}</td>
             <td>{{Emp.DeptName}}</td>
             <td>{{Emp.Designation}}</td>
-            <td><a ng-click="editEmployee(Emp.EmpNo)">Edit</a></td>
-            <td><a ng-click="deleteEmployee(Emp.EmpNo)">Delete</a></td>
+            <td>
+                <button ng-click="editEmployee(Emp.EmpNo)" class="btn btn-link" value="Edit"  >Edit</button>
+                <button ng-click="deleteEmployee(Emp.EmpNo)" class="btn btn-link" value="Delete">Delete</button>
+            </td>
         </tr>
-    </tbody>
 </table>
 
 

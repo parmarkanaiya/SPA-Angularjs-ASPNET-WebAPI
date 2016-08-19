@@ -3,9 +3,10 @@
     ViewBag.Title = "DeleteEmployee";
 }
 
-<h2>DeleteEmployee</h2>
+<h2>@ViewBag.Title</h2>
+<hr />
 
-<table>
+<table class="table">
     <tr>
         <td>EmpNo</td>
         <td>{{Employee.EmpNo}}</td>
@@ -27,4 +28,6 @@
         <td>{{Employee.Designation}}</td>
     </tr>
 </table>
-<input type="button" value="Delete" ng-click="delete()" />
+<input type="button" class="btn btn-primary" value="Delete" ng-click="delete()" />
+<input type="button" value="Cancel" ng-click="cancel()" class="btn btn-link" />
+

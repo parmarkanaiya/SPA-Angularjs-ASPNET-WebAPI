@@ -1,29 +1,35 @@
 ﻿
 @{
-    ViewBag.Title = "AddEmployee";
+    ViewBag.Title = "Add Employee";
 }
 
-<h2>Add New Employee</h2>
-<table>
+<h2>@ViewBag.Title</h2>
+<hr />
+
+<table class="table table-hover" border="0">
     <tr>
-        <td>EmpNo</td>
-        <td><input type="text" ng-model="EmpNo" />  </td>
+        <td class="col-lg-4"><label>Employee No</label></td>
+        <td class="col-lg-8"><input type="text" ng-model="EmpNo" class="form-control"/>  </td>
     </tr>
     <tr>
-        <td>EmpName</td>
-        <td><input type="text" ng-model="EmpName" />  </td>
+        <td><label>Employee Name</label></td>
+        <td><input type="text" ng-model="EmpName" class="form-control"/>  </td>
     </tr>
     <tr>
         <td>Salary</td>
-        <td><input type="text" ng-model="Salary" />  </td>
+        <td><input type="text" ng-model="Salary" class="form-control"/>  </td>
     </tr>
     <tr>
         <td>DeptName</td>
-        <td><input type="text" ng-model="DeptName" />  </td>
+        <td><input type="text" ng-model="DeptName" class="form-control"/>  </td>
     </tr>
     <tr>
         <td>Designation</td>
-        <td><input type="text" ng-model="Designation" />  </td>
+        <td><input type="text" ng-model="Designation" class="form-control"/>  </td>
     </tr>
 </table>
-<input type="button" value="Save" ng-click="save()" />
+<input type="button" value="Save" ng-click="save()" class="btn btn-primary" />
+<input type="button" value="Cancel" ng-click="cancel()" class="btn btn-link" />
+
+
+@*<input type="button" value="Cancel" class="btn-link" ng-click="cancel()" />*@

@@ -13,12 +13,17 @@
               });
     }
 
+    $scope.cancel = function () {
+        $location.path("/showemployees");
+    };
+
+
     //The delete method used to make HTTP DELETE call to the WEB API to update the record
     $scope.delete = function () {
         var promiseDeleteEmployee = SinglePageCRUDService.delete(ShareData.value);
 
         promiseDeleteEmployee.then(function (pl) {
-            $location.path("/showemployee");
+            $location.path("/showemployees");
         },
               function (errorPl) {
                   $scope.error = 'failure loading Employee', errorPl;
